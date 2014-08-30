@@ -7,6 +7,8 @@
 	ui = auto
 [push]
 	default = simple
+[pull]
+	rebase = true
 [core]
 	excludesfile = ~/.gitignore
 [alias]
@@ -18,5 +20,10 @@
 	st = status
 [instaweb]
 	browser = chrome
+[imap]
+	host = imaps://imap.gmail.com
+	port = 993
+	sslverify = false
+	folder = "[Gmail]/Drafts"
 [include]
 	path = ~/.gitconfig_local
