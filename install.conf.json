@@ -11,7 +11,8 @@
       "~/.tmux.conf": "tmux.conf",
       "~/.gitconfig": "gitconfig",
       "~/.gitignore": "gitignore",
-      "~/.ssh/rc": "sshrc"
+      "~/.ssh/rc": "sshrc",
+      "~/.inputrc": "inputrc"
     }
   },
   {
