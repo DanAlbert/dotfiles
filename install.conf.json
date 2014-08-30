@@ -1,11 +1,17 @@
 [
   {
+    "shell": [
+      ["mkdir -p ~/.ssh", "Making ~/.ssh"]
+    ]
+  },
+  {
     "link": {
       "~/.vim": "vimfiles/",
+      "~/.vimrc": "vimfiles/vimrc",
       "~/.tmux.conf": "tmux.conf",
       "~/.gitconfig": "gitconfig",
       "~/.gitignore": "gitignore",
-      "~/.vimrc": "vimfiles/vimrc",
+      "~/.ssh/rc": "sshrc",
       "~/.vim/localconfig.vim": "vimfiles/googleconfig.vim"
     }
   },
