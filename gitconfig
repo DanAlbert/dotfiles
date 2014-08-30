@@ -1,0 +1,22 @@
+[user]
+	name = Dan Albert
+	email = dan@gingerhq.net
+[branch]
+	autosetuprebase = always
+[color]
+	ui = auto
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+[alias]
+	cp = cherry-pick
+	edit-unmerged = \
+		"!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+	add-unmerged = \
+		"!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+	st = status
+[instaweb]
+	browser = chrome
+[include]
+	path = ~/.gitconfig_local

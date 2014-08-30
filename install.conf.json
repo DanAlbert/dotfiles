@@ -1,8 +1,17 @@
 [
-    {
-        "link": {}
-    },
-    {
-        "shell": []
+  {
+    "link": {
+      "~/.vim": "vimfiles/",
+      "~/.tmux.conf": "tmux.conf",
+      "~/.gitconfig": "gitconfig",
+      "~/.gitignore": "gitignore",
+      "~/.vimrc": "vimfiles/vimrc",
+      "~/.vim/localconfig.vim": "vimfiles/googleconfig.vim"
     }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing/updating submodules"]
+    ]
+  }
 ]
