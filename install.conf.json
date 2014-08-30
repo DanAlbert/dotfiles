@@ -11,8 +11,7 @@
       "~/.tmux.conf": "tmux.conf",
       "~/.gitconfig": "gitconfig",
       "~/.gitignore": "gitignore",
-      "~/.ssh/rc": "sshrc",
-      "~/.vim/localconfig.vim": "vimfiles/googleconfig.vim"
+      "~/.ssh/rc": "sshrc"
     }
   },
   {
