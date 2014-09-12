@@ -1,4 +1,6 @@
 # -*- mode: gitignore; -*-
+.clang_complete
+
 # vim
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
