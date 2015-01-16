@@ -30,6 +30,8 @@
 	ls = "ls-files"
 	lost = "! git fsck --full --no-reflogs --unreachable --lost-found | \
 		grep commit | cut -d ' ' -f3 | xargs -n 1 git log -n 1 --pretty=oneline"
+	sync = "! repo sync -j128 -c . && repo prune ."
+	upload = "! repo upload --cbr ."
 [commit]
 	diff = true
 [instaweb]
