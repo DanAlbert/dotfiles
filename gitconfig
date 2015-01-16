@@ -45,3 +45,7 @@
 	folder = "[Gmail]/Drafts"
 [include]
 	path = ~/.gitconfig_local
+[column]
+	ui = auto
+	status = never
+	branch = never
