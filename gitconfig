@@ -33,6 +33,7 @@
 	ec = "! vim ~/.gitconfig"
 	sync = "! repo sync -j128 -c . && repo prune ."
 	upload = "! repo upload --cbr ."
+	git = "! git"
 [commit]
 	diff = true
 [instaweb]
