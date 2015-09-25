@@ -1,4 +1,5 @@
 # -*- mode: gitignore; -*-
+.lvimrc
 .clang_complete
 
 # vim
