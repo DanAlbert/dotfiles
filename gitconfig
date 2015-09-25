@@ -34,6 +34,10 @@
 	sync = "! repo sync -j128 -c . && repo prune ."
 	upload = "! repo upload --cbr ."
 	git = "! git"
+	cplast = cherry-pick HEAD@{1}
+	authors = "! f() { \
+		git log --pretty='%aE' $1 | sort | uniq -c | sort -n; }; f"
+	pop = reset --hard HEAD^
 [commit]
 	diff = true
 [instaweb]
