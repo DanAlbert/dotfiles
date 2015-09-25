@@ -53,3 +53,8 @@
 	ui = auto
 	status = never
 	branch = never
+[log]
+	abbrevCommit = true
+[diff]
+	renames = copies
+	tool = meld
