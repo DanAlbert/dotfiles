@@ -7,8 +7,6 @@ set show-all-if-ambiguous on
 # Make history search (up and down arrow) take into account what you've already typed.
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-"\e[C": forward-char
-"\e[D": backward-char
 
 ## Make C-left and C-right move backwards and forwards by one word.
 ## (Terminator)
