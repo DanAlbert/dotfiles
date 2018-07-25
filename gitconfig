@@ -4,6 +4,7 @@
 [branch]
 	autosetuprebase = always
 [color]
+	branch = auto
 	ui = auto
 [push]
 	default = simple
@@ -22,8 +23,13 @@
 	merge-theirs = \
 		"!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; \
 		git checkout --theirs  `f`"
-	st = status
+	st = status -sb
 	br = branch
+	lsbr = \
+		"for-each-ref --sort=-committerdate refs/heads/ --format='\
+%(HEAD)%(align:left,32)%(refname:short)%(end)\
+%(align:left,16)%(committerdate:relative)%(end)\
+%(align:left,22)%(upstream:track)%(end) %(objectname:short) %(subject)'"
 	co = checkout
 	ci = "commit -v"
 	shame = "blame"
@@ -31,15 +37,16 @@
 	lost = "! git fsck --full --no-reflogs --unreachable --lost-found | \
 		grep commit | cut -d ' ' -f3 | xargs -n 1 git log -n 1 --pretty=oneline"
 	ec = "! vim ~/.gitconfig"
-	sync = "! repo sync -j128 -c . && repo prune ."
+	sync = "! repo sync -j128 -c ."
 	upload = "! repo upload --cbr ."
 	git = "! git"
 	cplast = cherry-pick HEAD@{1}
 	authors = "! f() { \
-		git log --pretty='%aE' $1 | sort | uniq -c | sort -n; }; f"
+		git log --no-merges --pretty='%aE' $1 | sort | uniq -c | sort -n; }; f"
 	pop = reset --hard HEAD^
 [commit]
 	diff = true
+	template = /usr/local/google/home/danalbert/.gitcommit-template.txt
 [instaweb]
 	browser = chrome
 [imap]
@@ -53,8 +60,12 @@
 	ui = auto
 	status = never
 	branch = never
-[log]
-	abbrevCommit = true
 [diff]
 	renames = copies
-	tool = meld
+	tool = vimdiff
+[http]
+	cookiefile = /usr/local/google/home/danalbert/.gitcookies
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
