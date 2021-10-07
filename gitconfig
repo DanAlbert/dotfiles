@@ -64,12 +64,16 @@
 	branch = never
 [diff]
 	renames = copies
-	tool = vimdiff
+	tool = vscode
 [http]
 	cookiefile = /usr/local/google/home/danalbert/.gitcookies
 [merge]
-	tool = vimdiff
+	tool = vscode
 [difftool]
 	prompt = false
 [log]
 	mailmap = false
+[mergetool "vscode"]
+	cmd = "code --wait "
+[difftool "vscode"]
+	cmd = "code --wait --diff  "
