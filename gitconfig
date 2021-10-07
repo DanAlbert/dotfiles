@@ -18,7 +18,7 @@
 [alias]
 	cp = cherry-pick
 	edit-unmerged = \
-		"!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; nvim `f`"
+		"!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; $EDITOR `f`"
 	add-unmerged = \
 		"!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
 	merge-theirs = \
@@ -37,7 +37,7 @@
 	ls = "ls-files"
 	lost = "! git fsck --full --no-reflogs --unreachable --lost-found | \
 		grep commit | cut -d ' ' -f3 | xargs -n 1 git log -n 1 --pretty=oneline"
-	ec = "! nvim ~/.gitconfig"
+	ec = "! $EDITOR ~/.gitconfig"
 	sync = "! pore sync ."
 	upload = "! pore upload --cbr ."
 	git = "! git"
