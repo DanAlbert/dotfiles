@@ -49,7 +49,6 @@
 	pr = push -u origin HEAD
 [commit]
 	diff = true
-	template = /usr/local/google/home/danalbert/.gitcommit-template.txt
 [instaweb]
 	browser = chrome
 [imap]
