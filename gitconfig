@@ -38,8 +38,8 @@
 	lost = "! git fsck --full --no-reflogs --unreachable --lost-found | \
 		grep commit | cut -d ' ' -f3 | xargs -n 1 git log -n 1 --pretty=oneline"
 	ec = "! $EDITOR ~/.gitconfig"
-	sync = "! pore sync ."
-	upload = "! pore upload --cbr ."
+	sync = "! repo sync ."
+	upload = "! repo-helper upload"
 	git = "! git"
 	cplast = cherry-pick HEAD@{1}
 	authors = "! f() { \
