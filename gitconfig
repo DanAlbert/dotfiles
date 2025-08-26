@@ -89,3 +89,5 @@
 	cmd = "code --wait "
 [difftool "vscode"]
 	cmd = "code --wait --diff  "
+[rebase]
+	autoSquash = true
