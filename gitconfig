@@ -46,6 +46,7 @@
 		git log --since=1.year.ago --no-merges --pretty='%aE' $1 \
 			| sort | uniq -c | sort -n; }; f"
 	pop = reset --hard HEAD^
+	pr = push -u origin HEAD
 [commit]
 	diff = true
 	template = /usr/local/google/home/danalbert/.gitcommit-template.txt
